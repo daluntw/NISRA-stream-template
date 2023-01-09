@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="Screen" x="56" y="208" width="1298" height="818" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Speaker" x="1384" y="704" width="498" height="318" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-NISRA_Stream_Gray">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="NISRA_Stream_Gray" data-name="NISRA Stream Gray" clip-path="url(#clip-NISRA_Stream_Gray)">
+    <path id="Background" d="M1920,1080H0V0H1920V1080ZM88,216a23.981,23.981,0,0,0-24,24V992a23.981,23.981,0,0,0,24,24H1320a23.982,23.982,0,0,0,24-24V240a23.98,23.98,0,0,0-24-24ZM1432,712a39.967,39.967,0,0,0-40,40V972a39.966,39.966,0,0,0,40,40h400a39.966,39.966,0,0,0,40-40V752a39.967,39.967,0,0,0-40-40Z" fill="#f7f7f7"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Screen)">
+      <g id="Screen-2" data-name="Screen" transform="translate(64 216)" fill="none" stroke="#282828" stroke-linejoin="round" stroke-width="4">
+        <rect width="1280" height="800" rx="24" stroke="none"/>
+        <rect x="2" y="2" width="1276" height="796" rx="22" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Speaker)">
+      <g id="Speaker-2" data-name="Speaker" transform="translate(1392 712)" fill="none" stroke="#282828" stroke-linejoin="round" stroke-width="4">
+        <rect width="480" height="300" rx="40" stroke="none"/>
+        <rect x="2" y="2" width="476" height="296" rx="38" fill="none"/>
+      </g>
+    </g>
+    <path id="Title_Bar" data-name="Title Bar" d="M13.5,9l42,42-42,42Z" transform="translate(62.5 67)" fill="#929aab"/>
+    <path id="Speaker_Bar" data-name="Speaker Bar" d="M6.917,21.066l3.534,3.376L21.62,34.724l4.789-4.582a1.611,1.611,0,0,0-.092-1.97l-4.4-3.8.02-.01-4.731-4.532a1.578,1.578,0,0,1,.042-2.158L30,5.516,24.226,0,6.925,16.476a3.147,3.147,0,0,0,0,4.59ZM44.94,26.94l-3.532-3.382L30.244,13.274l-4.811,4.582a1.549,1.549,0,0,0,.09,1.97l4.4,3.782h-.012l4.727,4.53a1.543,1.543,0,0,1-.058,2.128L21.828,42.416,27.636,48l17.3-16.476a3.144,3.144,0,0,0,0-4.59Z" transform="translate(1392.069 636)" fill="#929aab"/>
+    <text id="_NISRA" data-name="# NISRA" transform="translate(1800 65.188)" fill="#9b9b9b" font-size="36" font-family="jf-openhuninn-1.0"><tspan x="-71.613" y="0"># NISRA</tspan></text>
+    <text id="Title_Place_Holder" data-name="Title Place Holder" transform="translate(150 146)" fill="#393e46" font-size="96" font-family="jf-openhuninn-1.0"><tspan x="0" y="0">{{TITLE}}</tspan></text>
+    <text id="Speaker_Place_Holder" data-name="Speaker Place Holder" transform="translate(1460 676)" fill="#393e46" font-size="54" font-family="jf-openhuninn-1.0"><tspan x="0" y="0">{{SPEAKER}}</tspan></text>
+  </g>
+</svg>

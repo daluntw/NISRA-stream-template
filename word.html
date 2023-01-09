@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preload" href="jf-openhuninn-1.0.ttf" as="font" type="font/ttf">
+	<title>NISRA Live Stream Word</title>
+	<style>
+		@font-face {
+		  font-family: 'jf-openhuninn-1.0';
+		  src: url(jf-openhuninn-1.0.ttf);
+		}
+		body {
+		  font-family: 'jf-openhuninn-1.0';
+		}
+	</style>
+</head>
+<body>
+</body>
+<script>
+
+	let request = new XMLHttpRequest();
+	let urlParams = new URLSearchParams(window.location.search);
+	let color = urlParams.get("bg") ? urlParams.get("bg") : "white";
+	let place = urlParams.get("place") ? urlParams.get("place") : "left";
+
+    request.onreadystatechange = function() {
+        document.body.innerHTML = this.responseText;
+        document.getElementById("Word_Place_Holder").textContent = urlParams.get("word")? urlParams.get("word") : "hands0meda1un";
+
+    };
+
+    request.open('GET', "other/word-" + place + "-" + color + '.svg');
+    request.send();
+
+</script>
+</html>

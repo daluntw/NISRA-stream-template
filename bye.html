@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preload" href="jf-openhuninn-1.0.ttf" as="font" type="font/ttf">
+	<title>NISRA Live Stream Bye</title>
+	<style>
+		@font-face {
+		  font-family: 'jf-openhuninn-1.0';
+		  src: url(jf-openhuninn-1.0.ttf);
+		}
+		body {
+		  font-family: 'jf-openhuninn-1.0';
+		}
+	</style>
+</head>
+<body>
+</body>
+<script>
+
+	let request = new XMLHttpRequest();
+	let urlParams = new URLSearchParams(window.location.search);
+	let color = urlParams.get("bg") ? urlParams.get("bg") : "white";
+	let place = urlParams.get("place") ? urlParams.get("place") : "left";
+
+    request.onreadystatechange = function() {
+        document.body.innerHTML = this.responseText;
+
+    };
+
+    request.open('GET', "other/bye-" + place + "-" + color + '.svg');
+    request.send();
+
+</script>
+</html>

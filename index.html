@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preload" href="jf-openhuninn-1.0.ttf" as="font" type="font/ttf">
+	<title>NISRA Live Stream Background</title>
+	<style>
+		@font-face {
+		  font-family: 'jf-openhuninn-1.0';
+		  src: url(jf-openhuninn-1.0.ttf);
+		}
+		body {
+		  font-family: 'jf-openhuninn-1.0';
+		}
+	</style>
+</head>
+<body>
+</body>
+<script>
+
+	let request = new XMLHttpRequest();
+	let urlParams = new URLSearchParams(window.location.search);
+	let color = urlParams.get("bg") ? urlParams.get("bg") : "white";
+
+    request.onreadystatechange = function() {
+        document.body.innerHTML = this.responseText;
+
+        if(urlParams.get("title")) document.getElementById("Title_Place_Holder").textContent = urlParams.get("title");
+        if(urlParams.get("speaker")) document.getElementById("Speaker_Place_Holder").textContent = urlParams.get("speaker");
+    };
+
+    request.open('GET', "color/" + color + '.svg');
+    request.send();
+
+</script>
+</html>
